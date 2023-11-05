@@ -1,4 +1,4 @@
-onst { Product } = require('../models');
+const { Product } = require('../models');
 
 const productData = [
   {
