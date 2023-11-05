@@ -1,28 +1,28 @@
 const router = require("express").Router();
-const { Category, Product } = require("../../models");
+const { Tag, Product, ProductTag } = require("../../models");
 
-// The `/api/categories` endpoint
+// The `/api/tags` endpoint
 
 router.get("/", (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
+  // find all tags
+  // be sure to include its associated Product data
 });
 
 router.get("/:id", (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
+  // find a single tag by its `id`
+  // be sure to include its associated Product data
 });
 
 router.post("/", (req, res) => {
-  // create a new category
+  // create a new tag
 });
 
 router.put("/:id", (req, res) => {
-  // update a category by its `id` value
+  // update a tag's name by its `id` value
 });
 
 router.delete("/:id", (req, res) => {
-  // delete a category by its `id` value
+  // delete on tag by its `id` value
 });
 
 module.exports = router;
