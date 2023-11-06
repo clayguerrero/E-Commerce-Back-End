@@ -52,12 +52,23 @@ router.put("/:id", (req, res) => {
         res.status(200).json(updated);
       });
     } catch (error) {
-      res.status(400).json({ message: "WARNING : COULD NOT UPDATE TAG" });
+      res.status(400).json({ message: "WARNING : COULD NOT UPDATE CATEGORY" });
     }
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   // delete a category by its `id` value
+    try {
+    const categoryData = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!categoryData) res.status(404).json({ message: "404 : Category Not Found" });
+    else res.status(500).json(categoryData);
+  } catch (error) {
+    res.status(500).json({ message: "WARNING : Category Could Not Be Deleted!" });
+  }
 });
 
 module.exports = router;
