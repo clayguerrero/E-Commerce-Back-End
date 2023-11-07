@@ -6,7 +6,7 @@ This application is a functional back end for a store that allows you to create,
 
 ## Video Walkthrough
 
-[Link](https://drive.google.com/file/d/1321aWSiAgGPYU2mOzvft66hTGF6DISMB/view )
+[Link](https://drive.google.com/file/d/1321aWSiAgGPYU2mOzvft66hTGF6DISMB/view)
 
 ## Installation
 After installation, the user must npm install, source the schema file, and seed the data.
