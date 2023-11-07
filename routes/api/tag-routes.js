@@ -63,7 +63,7 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!tagData) res.status(404).json({ message: "404 : Tag Not Found" });
-    else res.status(500).json(tagData);
+    else res.status(200).json(tagData);
   } catch (error) {
     res.status(500).json({ message: "WARNING : Tag Could Not Be Deleted!" });
   }

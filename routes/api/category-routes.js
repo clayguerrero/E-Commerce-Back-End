@@ -65,7 +65,7 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!categoryData) res.status(404).json({ message: "404 : Category Not Found" });
-    else res.status(500).json(categoryData);
+    else res.status(200).json(categoryData);
   } catch (error) {
     res.status(500).json({ message: "WARNING : Category Could Not Be Deleted!" });
   }
